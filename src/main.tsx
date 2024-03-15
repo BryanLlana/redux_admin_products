@@ -7,6 +7,7 @@ import LayoutProduct from './layout/LayoutProduct'
 import Home from './pages/Home'
 import "@fontsource-variable/onest"; 
 import './index.css'
+import AddProduct from './pages/AddProduct'
 
 const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ const router = createBrowserRouter([
       {
         index: true,
         element: <Home />
+      },
+      {
+        path: '/nuevo-producto',
+        element: <AddProduct />
       }
     ]
   }
