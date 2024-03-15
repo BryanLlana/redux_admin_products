@@ -1,8 +1,7 @@
-import { useSelector } from 'react-redux'
-import { RootState } from '../stores/index';
+import { useAppSelector } from "../hooks/useStore"
 
 const Home = () => {
-  const products = useSelector((state: RootState) => state.products)
+  const products = useAppSelector(state => state.products)
   return (
     <div>Home</div>
   )
