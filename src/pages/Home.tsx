@@ -1,9 +1,8 @@
 import ProductItem from "../components/ProductItem"
-import { useAppSelector, useAppDispatch } from "../hooks/useStore"
+import { useAppSelector } from "../hooks/useStore"
 
 const Home = () => {
   const products = useAppSelector(state => state.products)
-  const dispatch = useAppDispatch()
 
   return (
     <div className="w-[1000px] mx-auto my-8">

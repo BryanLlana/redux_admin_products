@@ -9,18 +9,12 @@ export interface ProductWithId extends Product {
   id: number
 }
 
-const initialState: ProductWithId[] = [
-  {
-    id: 1,
-    name: 'Producto 1',
-    price: 300
-  },
-  {
-    id: 2,
-    name: 'Producto 2',
-    price: 400
-  }
-] 
+const initialState: ProductWithId[] = await (async () => {
+  const url = 'http://localhost:3000/products'
+  const data = await fetch(url)
+  const response = await data.json()
+  return response
+})()
 
 export const productsSlice = createSlice({
   name: 'products',
