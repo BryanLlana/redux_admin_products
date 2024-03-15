@@ -4,6 +4,8 @@ import { useAppSelector } from "../hooks/useStore"
 const Home = () => {
   const products = useAppSelector(state => state.products)
 
+  console.log(products)
+
   return (
     <div className="w-[1000px] mx-auto my-8">
       <div className="bg-white shadow-md rounded my-6">
